@@ -27,20 +27,19 @@ registerForm.addEventListener("submit", (e) => {
   addData(e);
 });
 function addData(e) {
-  
   set(ref(db, "data/" + e.target.name.value), {
     name: e.target.name.value,
     email: e.target.email.value,
     password: e.target.password.value,
   }).then(() => {
-    clearInput(e)
+    clearInput(e);
   });
 }
-const clearInput = (e)=>{
+const clearInput = (e) => {
   e.target.email.value = "";
-    e.target.password.value = "";
-    e.target.name.value = "";
-}
+  e.target.password.value = "";
+  e.target.name.value = "";
+};
 //   login
 let loginForm = document.getElementById("login-form");
 loginForm.addEventListener("submit", (e) => {

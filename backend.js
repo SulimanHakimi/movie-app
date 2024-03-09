@@ -3,6 +3,7 @@ const app = express();
 app.set("view engine", "ejs");
 let isLogin = true;
 app.listen(3000);
+app.use(express.static('public'))
 if (isLogin) {
   app.get("/", (req, res) => {
     res.render("index");
