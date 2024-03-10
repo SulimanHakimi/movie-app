@@ -1,9 +1,10 @@
 const express = require("express");
 const app = express();
-app.set("view engine", "ejs");
 let isLogin = true;
 app.listen(3000);
-app.use(express.static('public'))
+app.set("views", __dirname + "/views");
+app.set("view engine", "ejs");
+app.use(express.static(__dirname + "public"));
 if (isLogin) {
   app.get("/", (req, res) => {
     res.render("index");
