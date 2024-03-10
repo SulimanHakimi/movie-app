@@ -14,6 +14,7 @@ function movieCatch(movie) {
         cardList.style.display = "flex";
         movieSearch.style.display = "none";
         cardList.innerHTML = "";
+        notFoundMovie.style.display = "none";
 
         data.Search.forEach((film) => {
           fetch(`https://www.omdbapi.com/?apikey=59f796d9&i=${film.imdbID}`)
