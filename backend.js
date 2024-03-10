@@ -4,7 +4,7 @@ let isLogin = true;
 app.listen(3000);
 app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
-app.use(express.static(__dirname + "public"));
+app.use(express.static("public"));
 if (isLogin) {
   app.get("/", (req, res) => {
     res.render("index");
