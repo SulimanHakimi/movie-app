@@ -121,7 +121,7 @@
     main .card-list {
       margin: 0px 6vw;
       margin-top: 30px;
-      display: none;
+      display: flex;
       flex-direction: column;
     }
     .card {
@@ -191,6 +191,12 @@
       align-items: center;
       flex-direction: column;
     }
+    .empty-watchlist span {
+      cursor: pointer;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
   </style>
   <body>
     <div class="conteniar">
@@ -223,115 +229,72 @@
             Let’s add some movies!</span
           >
         </div>
-        <div class="card-list">
-          <div class="card">
-            <img
-              src="https://s3-alpha-sig.figma.com/img/df0b/6ef9/ddbc674841896e9c23ceb7df02ff2d85?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MqIYAov0igRSTuDfoWIo~3G5WjVNKPmf5Rdzz5sRocIO8xFCsNns1gXo1-dydSiMiu2W10r7R2k89nEGIKnoRgx9Hak3EIA-1HYIA-IGhHJ4f0b91i5pCGZivQ-jOXM2JheonhCo~dQfsToQ5kRlMV6-RJc~8FgUoBdOEQPhgtMr2~8HywlsjX2z1RkvDNIMQseANKdm1On5ysFhPWC8tnWgYJo2kaEhsm5aujLKh2LxLJkqUzcVhaX2hX9MOV7Wl52cCuR6pBd8GzHE7JDKds2zdwyjRfIxZVbJQwpJ1LHaMDwoVivjf2BoMjA-Aq47regmfzrdn-1XLsCrvHC8Dg__"
-              alt=""
-            />
-            <div class="card-content">
-              <div class="top-title-rate">
-                <span class="title">Blade Runner</span>
-                <div class="star-rate">
-                  <svg
-                    width="13"
-                    height="12"
-                    viewBox="0 0 13 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5.78671 1.19529C6.01122 0.504306 6.98878 0.504305 7.21329 1.19529L8.01547 3.66413C8.11588 3.97315 8.40384 4.18237 8.72876 4.18237H11.3247C12.0512 4.18237 12.3533 5.11208 11.7655 5.53913L9.66537 7.06497C9.40251 7.25595 9.29251 7.59447 9.39292 7.90349L10.1951 10.3723C10.4196 11.0633 9.62875 11.6379 9.04097 11.2109L6.94084 9.68503C6.67797 9.49405 6.32203 9.49405 6.05916 9.68503L3.95903 11.2109C3.37125 11.6379 2.58039 11.0633 2.8049 10.3723L3.60708 7.90349C3.70749 7.59448 3.59749 7.25595 3.33463 7.06497L1.2345 5.53914C0.646715 5.11208 0.948796 4.18237 1.67534 4.18237H4.27124C4.59616 4.18237 4.88412 3.97315 4.98453 3.66414L5.78671 1.19529Z"
-                      fill="#FEC654"
-                    />
-                  </svg>
-                  <span>8.1</span>
-                </div>
-              </div>
-              <div class="time-gu">
-                <span class="time-du">117 min</span>
-                <span class="gan">Action, Drama, Sci-fi</span>
-                <span class="add-fiv"
-                  ><svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM5 7C4.44772 7 4 7.44772 4 8C4 8.55228 4.44772 9 5 9H11C11.5523 9 12 8.55229 12 8C12 7.44772 11.5523 7 11 7H5Z"
-                      fill="#111827"
-                    />
-                  </svg>
-                  Watchlist
-                </span>
-              </div>
-              <p class="movie-des">
-                A blade runner must pursue and terminate four replicants who
-                stole a ship in space, and have returned to Earth to find their
-                creator.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="https://s3-alpha-sig.figma.com/img/df0b/6ef9/ddbc674841896e9c23ceb7df02ff2d85?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MqIYAov0igRSTuDfoWIo~3G5WjVNKPmf5Rdzz5sRocIO8xFCsNns1gXo1-dydSiMiu2W10r7R2k89nEGIKnoRgx9Hak3EIA-1HYIA-IGhHJ4f0b91i5pCGZivQ-jOXM2JheonhCo~dQfsToQ5kRlMV6-RJc~8FgUoBdOEQPhgtMr2~8HywlsjX2z1RkvDNIMQseANKdm1On5ysFhPWC8tnWgYJo2kaEhsm5aujLKh2LxLJkqUzcVhaX2hX9MOV7Wl52cCuR6pBd8GzHE7JDKds2zdwyjRfIxZVbJQwpJ1LHaMDwoVivjf2BoMjA-Aq47regmfzrdn-1XLsCrvHC8Dg__"
-              alt=""
-            />
-            <div class="card-content">
-              <div class="top-title-rate">
-                <span class="title">Blade Runner</span>
-                <div class="star-rate">
-                  <svg
-                    width="13"
-                    height="12"
-                    viewBox="0 0 13 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5.78671 1.19529C6.01122 0.504306 6.98878 0.504305 7.21329 1.19529L8.01547 3.66413C8.11588 3.97315 8.40384 4.18237 8.72876 4.18237H11.3247C12.0512 4.18237 12.3533 5.11208 11.7655 5.53913L9.66537 7.06497C9.40251 7.25595 9.29251 7.59447 9.39292 7.90349L10.1951 10.3723C10.4196 11.0633 9.62875 11.6379 9.04097 11.2109L6.94084 9.68503C6.67797 9.49405 6.32203 9.49405 6.05916 9.68503L3.95903 11.2109C3.37125 11.6379 2.58039 11.0633 2.8049 10.3723L3.60708 7.90349C3.70749 7.59448 3.59749 7.25595 3.33463 7.06497L1.2345 5.53914C0.646715 5.11208 0.948796 4.18237 1.67534 4.18237H4.27124C4.59616 4.18237 4.88412 3.97315 4.98453 3.66414L5.78671 1.19529Z"
-                      fill="#FEC654"
-                    />
-                  </svg>
-                  <span>8.1</span>
-                </div>
-              </div>
-              <div class="time-gu">
-                <span class="time-du">117 min</span>
-                <span class="gan">Action, Drama, Sci-fi</span>
-                <span class="add-fiv"
-                  ><svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM5 7C4.44772 7 4 7.44772 4 8C4 8.55228 4.44772 9 5 9H11C11.5523 9 12 8.55229 12 8C12 7.44772 11.5523 7 11 7H5Z"
-                      fill="#111827"
-                    />
-                  </svg>
-                  Watchlist
-                </span>
-              </div>
-              <p class="movie-des">
-                A blade runner must pursue and terminate four replicants who
-                stole a ship in space, and have returned to Earth to find their
-                creator. Lorem ipsum, dolor sit amet consectetur adipisicing
-                elit. Consequuntur tempore magnam autem eos nihil quibusdam quo
-                illo eum accusamus suscipit.
-              </p>
-            </div>
-          </div>
-        </div>
+        <div class="card-list"></div>
       </main>
     </div>
+    <script>
+      let emptyWatchlist = document.querySelector(".empty-watchlist");
+      let cardList = document.querySelector(".card-list");
+      let watchlistData = [];
+      watchlistData = JSON.parse(localStorage.getItem("watchListData"));
+      if (watchlistData.length > 0) {
+        emptyWatchlist.style.display = "none";
+        watchlistData.forEach((data) => {
+          cardList.innerHTML += `
+          <div class="card">
+            <img
+              src="${data.Poster}"
+              alt=""
+            />
+            <div class="card-content">
+              <div class="top-title-rate">
+                <span class="title">${data.Title}</span>
+                <div class="star-rate">
+                  <svg
+                    width="13"
+                    height="12"
+                    viewBox="0 0 13 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.78671 1.19529C6.01122 0.504306 6.98878 0.504305 7.21329 1.19529L8.01547 3.66413C8.11588 3.97315 8.40384 4.18237 8.72876 4.18237H11.3247C12.0512 4.18237 12.3533 5.11208 11.7655 5.53913L9.66537 7.06497C9.40251 7.25595 9.29251 7.59447 9.39292 7.90349L10.1951 10.3723C10.4196 11.0633 9.62875 11.6379 9.04097 11.2109L6.94084 9.68503C6.67797 9.49405 6.32203 9.49405 6.05916 9.68503L3.95903 11.2109C3.37125 11.6379 2.58039 11.0633 2.8049 10.3723L3.60708 7.90349C3.70749 7.59448 3.59749 7.25595 3.33463 7.06497L1.2345 5.53914C0.646715 5.11208 0.948796 4.18237 1.67534 4.18237H4.27124C4.59616 4.18237 4.88412 3.97315 4.98453 3.66414L5.78671 1.19529Z"
+                      fill="#FEC654"
+                    />
+                  </svg>
+                  <span>${data.imdbRating}</span>
+                </div>
+              </div>
+              <div class="time-gu">
+                <span class="time-du">${data.Runtime}</span>
+                <span class="gan">${data.Genre}</span>
+                <span class="rm-fiv"
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM5 7C4.44772 7 4 7.44772 4 8C4 8.55228 4.44772 9 5 9H11C11.5523 9 12 8.55229 12 8C12 7.44772 11.5523 7 11 7H5Z"
+                      fill="#111827"
+                    />
+                  </svg>
+                  Watchlist
+                </span>
+              </div>
+              <p class="movie-des">
+                ${data.Plot}
+
+              </p>
+            </div>
+          </div>
+          `;
+        });
+      }
+    </script>
   </body>
 </html>
