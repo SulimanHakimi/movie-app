@@ -246,8 +246,6 @@
                   </svg>
                   Watchlist`;
         rmButton.addEventListener("click", () => {
-          // cardList.removeChild(parentCard);
-
           watchlistData.splice(dataIndex, 1);
           console.log(watchlistData);
           localStorage.setItem("watchListData", JSON.stringify(watchlistData));
